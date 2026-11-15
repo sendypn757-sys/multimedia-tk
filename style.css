@@ -1,0 +1,115 @@
+:root{--ink:#2B2D42;--sun:#FFD93D;--coral:#FF8FA3;--mint:#7EE2A8;--sky:#7CC8FF}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{font-family:"Baloo 2","Comic Sans MS","Trebuchet MS",sans-serif;font-size:clamp(1.05rem,2vw,1.4rem);color:var(--ink);background:linear-gradient(180deg,#8ED1FC,#D6F0FF 60%,#BFF0C8);overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer;border:0;-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:4px solid var(--ink);outline-offset:3px}
+.sky{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.sky span{position:absolute;opacity:.75;animation:drift linear infinite}
+@keyframes drift{from{transform:translateX(-12vw)}to{transform:translateX(112vw)}}
+.top{position:fixed;top:.6rem;left:.8rem;right:.8rem;display:flex;justify-content:space-between;gap:.5rem;z-index:5}
+.badge,.round{background:#fff;border-radius:999px;padding:.3rem 1rem;font-weight:800;box-shadow:0 4px 0 rgba(0,0,0,.15)}
+.round:hover{background:var(--sun)}
+
+#deck{position:relative;height:100%}
+.slide{position:absolute;inset:0;padding:4rem clamp(1rem,6vw,5rem) 6.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center;overflow-y:auto;opacity:0;visibility:hidden;transform:scale(.9) translateY(20px);transition:opacity .4s,transform .5s cubic-bezier(.2,1.4,.4,1),visibility .4s}
+.slide.active{opacity:1;visibility:visible;transform:none}
+.c-sun{--a:#FFD93D}.c-coral{--a:#FF8FA3}.c-mint{--a:#7EE2A8}.c-sky{--a:#7CC8FF}
+h1{font-size:clamp(2.2rem,7vw,4.6rem);line-height:1.05;font-weight:800;color:#fff;-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;text-shadow:0 5px 0 var(--ink)}
+h2{font-size:clamp(1.5rem,4vw,2.7rem);font-weight:800;background:var(--a);padding:.1rem 1.5rem;border-radius:999px;box-shadow:0 5px 0 rgba(0,0,0,.18)}
+.lead{font-size:clamp(1.1rem,2.4vw,1.6rem);font-weight:500;max-width:34ch}
+.meta{font-size:.8rem;opacity:.85}
+.mascot{font-size:clamp(5rem,16vw,9rem);animation:bounce 1.6s ease-in-out infinite}
+@keyframes bounce{50%{transform:translateY(-18px) rotate(4deg)}}
+.bubble{background:#fff;border-radius:24px;padding:.7rem 1.4rem;font-weight:700;box-shadow:0 5px 0 rgba(0,0,0,.15);max-width:36ch}
+
+.big{background:var(--sun);border-radius:999px;padding:.7rem 2rem;font-size:1.5rem;font-weight:800;box-shadow:0 6px 0 #C9A400;transition:transform .15s}
+.big:hover{transform:scale(1.08) rotate(-2deg)}
+.big:active{transform:translateY(5px);box-shadow:0 1px 0 #C9A400}
+.big.sm{padding:.4rem 1.2rem;font-size:1.3rem}
+.big:disabled{opacity:.4;cursor:default}
+
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;width:min(100%,900px)}
+.tile{background:var(--b);border-radius:28px;padding:1rem;font-size:1.6rem;font-weight:800;box-shadow:0 7px 0 rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;min-height:9rem;transition:transform .2s}
+.tile span:first-child{font-size:3.2rem}
+.tile small{font-size:.9rem;font-weight:500}
+button.tile:hover{animation:wiggle .5s}
+button.tile:active{transform:translateY(5px);box-shadow:0 2px 0 rgba(0,0,0,.2)}
+.tile.static:hover{transform:translateY(-6px) scale(1.03)}
+@keyframes wiggle{25%{transform:rotate(-5deg) scale(1.05)}75%{transform:rotate(5deg) scale(1.05)}}
+.tiles.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@keyframes pop{from{transform:scale(.7);opacity:0}}
+.fc .f{font-size:1.3rem}
+
+.qa{display:flex;flex-direction:column;align-items:center;gap:1rem;width:100%}
+.q{font-size:clamp(1.4rem,3.4vw,2.3rem);font-weight:800}
+.show{font-size:clamp(2rem,6vw,3.5rem);letter-spacing:.1em;max-width:16ch;line-height:1.2}
+.opts{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}
+.opt{min-width:7rem;min-height:7rem;border-radius:28px;background:#fff;font-size:2.6rem;font-weight:800;box-shadow:0 7px 0 rgba(0,0,0,.2);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:transform .15s}
+.opt small{font-size:1rem}
+.opt:hover{transform:translateY(-6px) scale(1.06)}
+.opt.ok{animation:pop .4s;outline:6px solid #1F9D55}
+.opt.no{animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-10px)}75%{transform:translateX(10px)}}
+
+.keys{display:flex;gap:.4rem;width:min(100%,800px);height:34vh}
+.key{flex:1;border-radius:0 0 18px 18px;background:var(--b);font-weight:800;display:flex;align-items:flex-end;justify-content:center;padding-bottom:.6rem;box-shadow:0 7px 0 rgba(0,0,0,.2);transition:transform .08s}
+.key:active,.key.on{transform:translateY(7px);box-shadow:none}
+#pad{background:#fff;border-radius:24px;width:min(100%,900px);height:42vh;touch-action:none;box-shadow:0 7px 0 rgba(0,0,0,.18)}
+.palette{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+.sw{width:3rem;height:3rem;border-radius:50%;border:4px solid #fff;box-shadow:0 4px 0 rgba(0,0,0,.2)}
+.sw.on{outline:4px solid var(--ink)}
+.sw.clr{background:#fff;font-size:1.4rem}
+.refs{text-align:left;max-width:760px;font-size:.9rem;display:grid;gap:.6rem;background:#fff;padding:1rem 1rem 1rem 2.2rem;border-radius:20px;overflow-wrap:anywhere}
+
+.nav{position:fixed;bottom:.8rem;left:50%;translate:-50% 0;display:flex;align-items:center;gap:.8rem;z-index:5;background:rgba(255,255,255,.85);padding:.4rem .8rem;border-radius:999px}
+.dots{display:flex;gap:.35rem;flex-wrap:wrap;justify-content:center;max-width:46vw}
+.dot{width:.9rem;height:.9rem;border-radius:50%;background:#C9D6E2}
+.dot.on{background:#FF6B81;transform:scale(1.3)}
+.conf{position:fixed;top:-3rem;font-size:2rem;z-index:9;pointer-events:none;animation:fall 2s ease-in forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+
+@media (max-width:700px){
+  .tiles,.tiles.three{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .slide{justify-content:flex-start;padding-top:3.6rem}
+  .tile{min-height:7rem;font-size:1.3rem}
+  .tile span:first-child{font-size:2.4rem}
+  .dots{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ===== Tambahan: grid, foto, logo ===== */
+.tiles.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid2{display:grid;grid-template-columns:1fr 1.5fr;gap:1.2rem;align-items:center;width:min(100%,1000px)}
+.fig{margin:0;position:relative;overflow:hidden;border-radius:24px;aspect-ratio:16/10;background:#fff;box-shadow:0 7px 0 rgba(0,0,0,.18);display:grid;place-items:center}
+.fig::before{content:attr(data-ph);position:absolute;padding:.6rem;font-size:.8rem}
+.fig img{position:relative;width:100%;height:100%;object-fit:cover;display:block}
+.fig figcaption{position:absolute;left:0;right:0;bottom:0;z-index:1;background:rgba(43,45,66,.78);color:#fff;font-size:.7rem;padding:.15rem .6rem}
+.fc .f img{display:block;margin:0 auto .3rem;height:3.6rem;max-width:90%;object-fit:contain;background:#fff;border-radius:14px;padding:.25rem}
+@media (max-width:700px){.grid2{grid-template-columns:1fr}.fig{max-width:340px;margin:0 auto}}
+
+/* ===== Kartu video & batas kuis ===== */
+.fc{padding:.6rem;justify-content:flex-start;align-items:stretch}
+.fc .ff{background:none;width:100%;min-height:8rem;display:flex;flex-direction:column;align-items:center;justify-content:center;font:inherit;font-weight:800;border-radius:20px}
+.fc .ff:hover{animation:wiggle .5s}
+.fc .bk{display:none;flex-direction:column;align-items:center;gap:.5rem;width:100%;font-size:.95rem;font-weight:500;animation:pop .35s}
+.fc.flip .ff{display:none}.fc.flip .bk{display:flex}
+.fc .s{font-size:.75rem;opacity:.85}
+.vid{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:var(--ink)}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid .play{position:absolute;inset:0;width:100%;height:100%;background-color:var(--ink);background-size:cover;background-position:center;display:grid;place-items:center}
+.vid .play span{width:3.4rem;height:3.4rem;border-radius:50%;background:#FF4D4D;color:#fff;display:grid;place-items:center;font-size:1.4rem;padding-left:.2rem}
+.vid.alt{display:grid;place-items:center;aspect-ratio:auto;min-height:5rem;background:#fff;padding:.6rem}
+.vid.alt a{color:var(--ink);font-weight:800}
+.cnt{font-weight:700;background:#fff;padding:.1rem .9rem;border-radius:999px}
+@media (max-width:700px){.fcs{grid-template-columns:1fr}}
+
+/* ===== Slide manfaat: ilustrasi ===== */
+.tiles.four{grid-template-columns:repeat(4,minmax(0,1fr));width:min(100%,1100px)}
+.tile .ti{width:100%;max-width:9rem;height:auto;border-radius:14px;background:#fff}
+.tiles.four .tile{font-size:1.3rem;min-height:12rem}
+@media (max-width:900px){.tiles.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ===== Foto di slide manfaat ===== */
+.tile .fig{width:100%;aspect-ratio:4/3;border-radius:14px;box-shadow:none;margin-bottom:.3rem}
+.tile .fig figcaption{font-size:.6rem;font-weight:500}
