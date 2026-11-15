@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Media belajar interaktif berbasis multimedia untuk anak TK usia 5-7 tahun">
+<title>Belajar Seru dengan Multimedia!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sky" id="sky" aria-hidden="true"></div>
+<header class="top">
+  <span class="badge" id="stars" aria-live="polite">⭐ 0</span>
+  <span><button class="round" id="say">🔊 Bacakan</button> <button class="round" id="mute" aria-pressed="false" aria-label="Matikan suara">🔔</button></span>
+</header>
+
+<main id="deck">
+
+<section class="slide c-sun" data-say="Halo teman-teman! Ayo belajar seru dengan multimedia!">
+  <div class="mascot" aria-hidden="true">🦉</div>
+  <h1>Belajar Seru dengan Multimedia!</h1>
+  <p class="lead">Media belajar interaktif untuk anak TK usia 5–7 tahun</p>
+  <button class="big" id="start">Ayo Mulai! 🚀</button>
+  <p class="meta">Sendy Prasetya Nugraha · 1412240078 | Rendy Eka Ariyanto · 1412240074<br>Multimedia (IF562528) · Universitas PGRI Ronggolawe Tuban</p>
+</section>
+
+<section class="slide c-sky" data-say="Tujuan kita hari ini: mengenal multimedia, mencoba permainannya, dan memakainya dengan sehat.">
+  <h2>Tujuan Kita</h2>
+  <p class="lead">Untuk anak-anak, guru TK, dan orang tua.</p>
+  <div class="tiles three">
+    <div class="tile static" style="--b:#FFD93D"><span>🎯</span>Mengenal<small>Memahami apa itu multimedia dan unsur-unsurnya.</small></div>
+    <div class="tile static" style="--b:#7EE2A8"><span>🎮</span>Mencoba<small>Bermain warna, angka, hewan, piano, dan menggambar.</small></div>
+    <div class="tile static" style="--b:#FF8FA3"><span>💚</span>Memahami<small>Menilai manfaat dan cara memakainya dengan sehat.</small></div>
+  </div>
+</section>
+
+<section class="slide c-coral" data-say="Apa itu multimedia? Ketuk gambarnya untuk mengenal!">
+  <h2>Apa itu multimedia?</h2>
+  <p class="lead">Gabungan huruf, gambar, suara, video, dan permainan. Ketuk satu!</p>
+  <div class="tiles">
+    <button class="tile" style="--b:#FF8FA3" data-t="Teks: huruf dan kata yang bisa kita baca."><span>🔤</span>Teks</button>
+    <button class="tile" style="--b:#7EE2A8" data-t="Gambar: warna-warni yang bagus dilihat."><span>🖼️</span>Gambar</button>
+    <button class="tile" style="--b:#FFD93D" data-t="Suara: lagu dan cerita yang bisa didengar."><span>🔊</span>Suara</button>
+    <button class="tile" style="--b:#7CC8FF" data-t="Video: gambar yang bergerak dan ada suaranya."><span>🎬</span>Video</button>
+    <button class="tile" style="--b:#FF8FA3" data-t="Animasi: gambar yang menari dan bergerak."><span>✨</span>Animasi</button>
+    <button class="tile" style="--b:#7EE2A8" data-t="Permainan: belajar sambil bermain."><span>🎮</span>Game</button>
+  </div>
+  <p class="bubble" id="tileInfo">Ketuk gambar di atas ya!</p>
+</section>
+
+<section class="slide c-mint" data-say="Kenapa anak-anak suka? Karena bisa melihat, mendengar, dan menyentuh!">
+  <h2>Kenapa belajar jadi seru?</h2>
+  <div class="tiles three">
+    <div class="tile static" style="--b:#7CC8FF"><span>👀</span>Melihat<small>Gambar dan warna menarik perhatian.</small></div>
+    <div class="tile static" style="--b:#FFD93D"><span>👂</span>Mendengar<small>Lagu dan cerita mudah diingat.</small></div>
+    <div class="tile static" style="--b:#FF8FA3"><span>👆</span>Menyentuh<small>Belajar sambil bermain dan mencoba.</small></div>
+  </div>
+</section>
+
+<section class="slide c-mint" data-say="Manfaat multimedia bagi anak: bahasa, konsep dasar, gerak jari, dan kreativitas.">
+  <h2>Manfaat Multimedia bagi Anak</h2>
+  <div class="tiles four">
+    <div class="tile static" style="--b:#FFD93D"><figure class="fig" data-ph="Taruh foto: images/manfaat-bahasa.webp"><img src="images/manfaat-bahasa.webp" alt="Anak membaca buku cerita bersama pendamping" width="800" height="600" loading="lazy" onerror="this.remove()"><figcaption>Foto:Curated Lifestyle / Unsplash</figcaption></figure>Bahasa<small>Kata baru lebih mudah dikenal lewat gambar dan suara.</small></div>
+    <div class="tile static" style="--b:#FF8FA3"><figure class="fig" data-ph="Taruh foto: images/manfaat-angka.webp"><img src="images/manfaat-angka.webp" alt="Anak bermain balok angka dan huruf" width="800" height="600" loading="lazy" onerror="this.remove()"><figcaption>Foto: Curated Lifestyle / Unsplash</figcaption></figure>Konsep dasar<small>Warna, angka, dan huruf dikenalkan lewat permainan.</small></div>
+    <div class="tile static" style="--b:#7CC8FF"><figure class="fig" data-ph="Taruh foto: images/manfaat-jari.webp"><img src="images/manfaat-jari.webp" alt="Anak mengetuk layar tablet" width="800" height="600" loading="lazy" onerror="this.remove()"><figcaption>Foto: Sajad Nori / Unsplash</figcaption></figure>Gerak jari<small>Mengetuk dan menggambar melatih motorik halus.</small></div>
+    <div class="tile static" style="--b:#7EE2A8"><figure class="fig" data-ph="Taruh foto: images/manfaat-kreatif.webp"><img src="images/manfaat-kreatif.webp" alt="Anak menggambar dan mewarnai" width="800" height="600" loading="lazy" onerror="this.remove()"><figcaption>Foto: Andy Quezada / Unsplash</figcaption></figure>Kreativitas<small>Anak bebas mencoba menggambar dan bermusik.</small></div>
+  </div>
+  <p class="bubble">Manfaat ini paling terasa jika konten dipilih dengan tepat dan anak didampingi.</p>
+</section>
+
+<section class="slide c-sun" data-say="Begini cara kami merancang media untuk anak usia lima sampai tujuh tahun.">
+  <h2>Cara Merancang untuk Usia 5–7 Tahun</h2>
+  <div class="tiles two">
+    <div class="tile static" style="--b:#7CC8FF"><span>👆</span>Tombol besar<small>Mudah diketuk oleh jari kecil.</small></div>
+    <div class="tile static" style="--b:#7EE2A8"><span>🔊</span>Suara pengarah<small>Petunjuk dibacakan karena sebagian anak belum lancar membaca.</small></div>
+    <div class="tile static" style="--b:#FF8FA3"><span>⭐</span>Hadiah langsung<small>Suara dan bintang memberi semangat saat jawaban benar.</small></div>
+    <div class="tile static" style="--b:#7CC8FF"><span>🛡️</span>Aman dan tenang<small>Tanpa iklan, tanpa data pribadi, dan tanpa pindah ke situs lain.</small></div>
+  </div>
+</section>
+
+<section class="slide c-sky game" id="g-color" data-say="">
+  <h2>Game Warna 🎨</h2><div class="qa"></div>
+</section>
+
+<section class="slide c-sun game" id="g-count" data-say="">
+  <h2>Game Berhitung 🔢</h2><div class="qa"></div>
+</section>
+
+<section class="slide c-coral game" id="g-animal" data-say="">
+  <h2>Tebak Suara Hewan 🐾</h2><div class="qa"></div>
+</section>
+
+<section class="slide c-sky" data-say="Mari bermain piano! Ketuk tuts-nya.">
+  <h2>Main Piano 🎹</h2>
+  <p class="lead">Ketuk tuts warna-warni, mainkan lagu Do Re Mi!</p>
+  <div class="keys" id="keys"></div>
+</section>
+
+<section class="slide c-mint" data-say="Ayo menggambar! Pilih warna lalu gambar dengan jarimu.">
+  <h2>Ayo Menggambar 🖍️</h2>
+  <canvas id="pad" aria-label="Kertas gambar"></canvas>
+  <div class="palette" id="palette"></div>
+</section>
+
+<section class="slide c-sky" data-say="Ini media belajar anak yang sudah ada. Ketuk kartunya!">
+  <h2>Contoh Media Belajar Anak</h2>
+  <p class="lead">Ketuk kartu untuk melihat penjelasan dan videonya.</p>
+  <div class="tiles three fcs">
+    <div class="tile fc" style="--b:#FFD93D" data-yt="ALmJ3iTgqLo" data-q="Sesame Street official"><button class="ff" aria-label="Buka kartu Sesame Street"><span class="f"><img src="images/sesame-street.webp" alt="Logo Sesame Street" loading="lazy" onerror="this.remove()">📺<br>Sesame Street</span></button><div class="bk"><p class="k">Acara TV edukasi anak sejak 1969 dengan lagu, boneka, dan animasi. Tinjauan penelitian (Mares &amp; Pan, 2013) menemukan efek belajar positif di 15 negara.</p><div class="vid"></div><small class="s">Video: Sesame Street Sunny Days Song☀️, Sesame Street</small><button class="round back">↩ Tutup</button></div></div>
+    <div class="tile fc" style="--b:#7EE2A8" data-yt="ZotsK7MQOZk" data-q="Khan Academy Kids"><button class="ff" aria-label="Buka kartu Khan Academy Kids"><span class="f"><img src="images/khan-kids.webp" alt="Logo Khan Academy Kids" loading="lazy" onerror="this.remove()">📱<br>Khan Academy Kids</span></button><div class="bk"><p class="k">Aplikasi gratis untuk anak usia 2–8 tahun berisi buku, lagu, dan permainan belajar.</p><div class="vid"></div><small class="s">Video: Introducing Khan Academy Kids, Khan Academy Kids</small><button class="round back">↩ Tutup</button></div></div>
+    <div class="tile fc" style="--b:#FF8FA3" data-yt="njbdBbcnr6o" data-q="PBS KIDS official"><button class="ff" aria-label="Buka kartu PBS KIDS"><span class="f"><img src="images/pbs-kids.webp" alt="Logo PBS KIDS" loading="lazy" onerror="this.remove()">🌈<br>PBS KIDS</span></button><div class="bk"><p class="k">Layanan media publik Amerika Serikat dengan video, permainan, dan aplikasi belajar gratis untuk anak usia 2–8 tahun.</p><div class="vid"></div><small class="s">Video: 🍎The ABC Song | Nursery Rhymes, PBS Kids</small><button class="round back">↩ Tutup</button></div></div>
+  </div>
+</section>
+
+<section class="slide c-sun" data-say="Untuk bapak ibu guru dan orang tua: dampingi anak saat memakai layar.">
+  <h2>Pesan untuk Guru dan Orang Tua</h2>
+  <div class="tiles three">
+    <div class="tile static" style="--b:#7CC8FF"><span>👨‍👩‍👧</span>Dampingi<small>Temani anak dan ajak ngobrol tentang yang dilihat.</small></div>
+    <div class="tile static" style="--b:#7EE2A8"><span>⏰</span>Batasi waktu<small>Untuk usia 2–5 tahun, AAP menyarankan sekitar 1 jam per hari dengan tayangan berkualitas.</small></div>
+    <div class="tile static" style="--b:#FF8FA3"><span>🌳</span>Seimbang<small>Imbangi dengan bermain di luar, bergerak, dan tidur cukup.</small></div>
+  </div>
+</section>
+
+<section class="slide c-coral" id="end" data-say="Hore! Kamu hebat! Terima kasih sudah belajar bersama!">
+  <div class="mascot" aria-hidden="true">🏆</div>
+  <h2>Hore, Kamu Hebat!</h2>
+  <p class="lead" id="final">Kamu mendapat ⭐ 0 bintang</p>
+  <div class="tiles three">
+    <div class="tile static" style="--b:#FFD93D"><small>Multimedia membuat belajar lebih menarik bagi anak.</small></div>
+    <div class="tile static" style="--b:#7EE2A8"><small>Permainan interaktif melatih warna, angka, dan mengenal hewan.</small></div>
+    <div class="tile static" style="--b:#7CC8FF"><small>Pendampingan dan waktu layar yang sehat tetap penting.</small></div>
+  </div>
+  <button class="big" id="again">Main Lagi 🔁</button>
+</section>
+
+<section class="slide c-sky" data-say="">
+  <h2>Referensi</h2>
+  <ol class="refs">
+    <li>Mares, M.-L., &amp; Pan, Z. (2013). Effects of Sesame Street: A meta-analysis of children's learning in 15 countries. <em>Journal of Applied Developmental Psychology, 34</em>(3), 140–151. https://doi.org/10.1016/j.appdev.2013.01.001</li>
+    <li>Council on Communications and Media. (2016). Media and young minds. <em>Pediatrics, 138</em>(5), e20162591. https://doi.org/10.1542/peds.2016-2591</li>
+    <li>World Health Organization. (2019). <em>Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age</em>. https://www.who.int/publications/i/item/9789241550536</li>
+    <li>Khan Academy Kids. https://learn.khanacademykids.org/ (diakses 12 November 2026)</li>
+    <li>PBS KIDS. https://pbskids.org/ (diakses 12 November 2026)</li>
+  </ol>
+  <p class="meta">Video slide 12: YouTube (judul dan kanal tertera pada tiap kartu). Foto slide manfaat: Unsplash (nama fotografer tertera pada foto). Logo: aset resmi Sesame Street, Khan Academy Kids, dan PBS KIDS. Emoji: Unicode. Font: Baloo 2 (Google Fonts). Suara: Web Audio dan Web Speech API browser.</p>
+</section>
+
+</main>
+
+<nav class="nav" aria-label="Navigasi slide">
+  <button class="big sm" id="prev" aria-label="Slide sebelumnya">◀</button>
+  <span class="dots" id="dots"></span>
+  <button class="big sm" id="next" aria-label="Slide berikutnya">▶</button>
+</nav>
+<script src="script.js"></script>
+</body>
+</html>
