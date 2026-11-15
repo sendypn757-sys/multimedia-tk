@@ -7,6 +7,8 @@ Presentasi interaktif berbasis web untuk Proyek UTS Multimedia (IF562528), Unive
 
 **Live:** [URL GitHub Pages]
 
+<img src="images/qr-multimedia-tk.png" alt="QR code menuju presentasi" width="160">
+
 ## Deskripsi
 Presentasi 15 slide yang menjelaskan manfaat multimedia bagi anak usia dini sekaligus menjadi media belajar interaktif. Anak dapat bermain game warna, berhitung, menebak suara hewan, memainkan piano, dan menggambar. Dibuat dengan HTML, CSS, dan JavaScript murni tanpa framework.
 
@@ -43,7 +45,15 @@ images/      foto dan logo
 ```
 
 ## Screenshot
-[Tautkan 5-10 screenshot desktop dan HP di sini]
+Tampilan desktop media belajar interaktif.
+
+<p>
+  <img src="images/1.png" width="320" alt="Screenshot tampilan desktop 1">
+  <img src="images/2.png" width="320" alt="Screenshot tampilan desktop 2">
+  <img src="images/3.png" width="320" alt="Screenshot tampilan desktop 3">
+  <img src="images/4.png" width="320" alt="Screenshot tampilan desktop 4">
+  <img src="images/5.png" width="320" alt="Screenshot tampilan desktop 5">
+</p>
 
 ## Referensi
 1. Mares, M.-L., & Pan, Z. (2013). Effects of Sesame Street: A meta-analysis of children's learning in 15 countries. *Journal of Applied Developmental Psychology, 34*(3), 140-151. https://doi.org/10.1016/j.appdev.2013.01.001. Diakses [tanggal].
@@ -66,9 +76,9 @@ Video ditampilkan lewat pemutar YouTube resmi (embed) dan tidak diunggah ulang.
 
 | Kartu | Judul video | Kanal | URL | Diakses |
 |-------|-------------|-------|-----|---------|
-| Sesame Street | [judul] | [kanal] | [URL] | [tanggal] |
-| Khan Academy Kids | [judul] | [kanal] | [URL] | [tanggal] |
-| PBS KIDS | [judul] | [kanal] | [URL] | [tanggal] |
+| Sesame Street | Sesame Street Sunny Days Song☀️ | Sesame Street | https://youtu.be/ALmJ3iTgqLo?si=VFtLyeAa2zNu2w7R | Diakses :14 November 2026 |
+| Khan Academy Kids | Introducing Khan Academy Kids | Khan Academy Kids | https://youtu.be/ZotsK7MQOZk?si=kfBgjALVPL7NlPBN | Diakses :14 November 2026 |
+| PBS KIDS | 🍎The ABC Song Nursery Rhymes | PBS Kids | https://youtu.be/njbdBbcnr6o?si=udraYsJTN1O3znTr | Diakses :14 November 2026 |
 
 ## Catatan
 Seluruh kode ditulis dan dimodifikasi untuk keperluan tugas ini. Logo dan foto milik pihak ketiga digunakan untuk keperluan edukasi dengan atribusi di atas.
