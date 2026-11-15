@@ -5,7 +5,7 @@ Presentasi interaktif berbasis web untuk Proyek UTS Multimedia (IF562528), Unive
 - **Nama:** Sendy Prasetya Nugraha | **NIM:** 1412240078
 - **Nama:** Rendy Eka Ariyanto | **NIM:** 1412240074
 
-**Live:** [URL GitHub Pages]
+**Live:** https://sendypn757-sys.github.io/multimedia-tk/
 
 <img src="images/qr-multimedia-tk.png" alt="QR code menuju presentasi" width="160">
 
